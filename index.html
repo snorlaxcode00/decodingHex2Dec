@@ -3,24 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Electric Meter Decoder</title>
+    <title>Data Decoder</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Smart Electric Meter Decoder</h1>
+        <h1>Data Decoder</h1>
+        <h2>Hexadecimal Data Decoder</h2>
         <label for="hexInput">Enter Hexadecimal Data:</label>
         <input type="text" id="hexInput">
-        <button onclick="decode()">Decode</button>
-        <div id="output"></div>
-        <div id="breakdown" style="display:none;">
-            <h2>Hex Code Breakdown:</h2>
+        <button onclick="decodeHex()">Decode</button>
+        <div id="outputHex"></div>
+        <div id="breakdownHex" style="display:none;">
+            <h3>Hexadecimal Data Breakdown:</h3>
             <ul>
-                <li><strong>Header:</strong> <span id="header"></span></li>
-                <li><strong>Total kWh:</strong> <span id="totalKWh"></span> kWh</li>
-                <li><strong>Voltage Harmonics:</strong> <span id="voltageHarmonics"></span></li>
-                <li><strong>Current Harmonics:</strong> <span id="currentHarmonics"></span></li>
-                <li><strong>Phase Voltage:</strong> <span id="phaseVoltage"></span> V</li>
+                <li><strong>Header:</strong> <span id="headerHex"></span></li>
+                <li><strong>Total kWh:</strong> <span id="totalKWhHex"></span> kWh</li>
+                <li><strong>Voltage Harmonics:</strong> <span id="voltageHarmonicsHex"></span></li>
+                <li><strong>Current Harmonics:</strong> <span id="currentHarmonicsHex"></span></li>
+                <li><strong>Phase Voltage:</strong> <span id="phaseVoltageHex"></span> V</li>
+            </ul>
+        </div>
+
+        <h2>Epoch Time Decoder</h2>
+        <label for="epochInput">Enter Epoch Time:</label>
+        <input type="text" id="epochInput">
+        <button onclick="decodeEpoch()">Decode</button>
+        <div id="outputEpoch"></div>
+        <div id="breakdownEpoch" style="display:none;">
+            <h3>Epoch Time Breakdown:</h3>
+            <ul>
+                <li><strong>Epoch Time:</strong> <span id="decodedEpoch"></span></li>
+                <li><strong>Date:</strong> <span id="decodedDate"></span></li>
+                <li><strong>Time:</strong> <span id="decodedTime"></span> (UTC)</li>
             </ul>
         </div>
     </div>
