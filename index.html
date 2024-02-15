@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Electric Meter Decoder</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Electric Meter Decoder</h1>
+        <label for="hexInput">Enter Hexadecimal Data:</label>
+        <input type="text" id="hexInput">
+        <button onclick="decode()">Decode</button>
+        <div id="output"></div>
+        <div id="breakdown" style="display:none;">
+            <h2>Hex Code Breakdown:</h2>
+            <ul>
+                <li><strong>Header:</strong> <span id="header"></span></li>
+                <li><strong>Total kWh:</strong> <span id="totalKWh"></span> kWh</li>
+                <li><strong>Voltage Harmonics:</strong> <span id="voltageHarmonics"></span></li>
+                <li><strong>Current Harmonics:</strong> <span id="currentHarmonics"></span></li>
+                <li><strong>Phase Voltage:</strong> <span id="phaseVoltage"></span> V</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
